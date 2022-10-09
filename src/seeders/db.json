@@ -4,69 +4,69 @@
         "date": "20.09.2022",
         "name": "DHL Logistics",
         "amount": "37.496",
-        "distance": 132342
+        "distance": "132342"
     },
     {
         "id": 2,
         "date": "20.09.2022",
         "name": "Kuehne & Nagel",
         "amount": "23.379",
-        "distance": 82374
+        "distance": "82374"
     },
     {
         "id": 3,
         "date": "20.09.2022",
         "name": "DB Schenker Logistics",
         "amount": "18.987",
-        "distance": 473764
+        "distance": "473764"
     },
     {
         "id": 4,
         "date": "20.09.2022",
         "name": "C.H. Robinson Worldwide",
         "amount": "11.922",
-        "distance": 435859
+        "distance": "435859"
     },
     {
         "id": 5,
         "date": "20.09.2022",
         "name": "DSV",
         "amount": "8.651",
-        "distance": 445735
+        "distance": "445735"
     },
     {
         "id": 6,
         "date": "20.09.2022",
         "name": "CEVA Logistics",
         "amount": "7.864",
-        "distance": 13242
+        "distance": "13242"
     },
     {
         "id": 7,
         "date": "20.09.2022",
         "name": "Panalpina",
         "amount": "7.333",
-        "distance": 48732
+        "distance": "48732"
     },
     {
         "id": 8,
         "date": "20.09.2022",
         "name": "Dachser & Co.",
         "amount": "7.134",
-        "distance": 58468
+        "distance": "58468"
     },
     {
         "id": 9,
         "date": "20.09.2022",
         "name": "Expeditors International",
         "amount": "6.565",
-        "distance": 583248
+        "distance": "583248"
     },
     {
         "id": 10,
         "date": "20.09.2022",
         "name": "SNCF Geodis",
         "amount": "5.847",
-        "distance": 48345
+        "distance": "48345"
     }
 ]

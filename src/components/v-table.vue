@@ -1,4 +1,26 @@
 <template>
+
+  <div class="filter">
+    <div class="filter__header">
+        Фильтрация:
+    </div>
+    <select name="" id="" v-model="column">
+        <option value="name">Название</option>
+        <option value="amount">Количество</option>
+        <option value="distance">Расстояние</option>
+    </select>
+    <select name="" id="" v-model="condition">
+        <option value="=">Равно</option>
+        <option value="contains">Содержит</option>
+        <option value=">">Больше</option>
+        <option value="<">Меньше</option>
+    </select>
+    <input type="text" v-model="input">
+    <button @click="formOut(column, condition, input)">
+        Отфильтровать
+    </button>
+  </div>
+
   <div class="table">
     <div class="table__header">
       <p>Дата</p>
@@ -28,6 +50,7 @@
 
 <script>
 import vTableRow from '@/components/v-table-row.vue'
+import { mapActions } from 'vuex'
 
 export default {
   components: {
@@ -41,7 +64,10 @@ export default {
   data() {
     return {
       pageNumber: 1,
-      numberOfTableEntries: 5
+      numberOfTableEntries: 5,
+      column: '',
+      condition: '',
+      input: ''
     }
   },
   computed: {
@@ -55,8 +81,20 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'GET_FILTER_CONDITIONS'
+    ]),
     pageClick(page) {
       this.pageNumber = page
+    },
+    formOut(column, condition, input) {
+      let filterObj = 
+      {
+        column: column,
+        condition: condition,
+        input: input
+      }
+      this.GET_FILTER_CONDITIONS(filterObj)
     }
   }
 }
