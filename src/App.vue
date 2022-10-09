@@ -1,15 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <vTable 
+      :table_data="TABLE"
+    />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import vTable from '@/components/v-table.vue'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    vTable
+  },
+  computed: {
+    ...mapGetters([
+      'TABLE'
+    ])
+  },
+  methods: {
+    ...mapActions([
+      'GET_TABLE_FROM_DB'
+    ])
+  },
+  mounted() {
+    this.GET_TABLE_FROM_DB()
   }
 }
 </script>
@@ -22,5 +39,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.container {
+  position: relative;
+  width: 1140px;
+  margin: 0 auto;
 }
 </style>
