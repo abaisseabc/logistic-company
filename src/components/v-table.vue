@@ -8,7 +8,7 @@
     </div>
     <div class="table__body">
       <vTableRow 
-        v-for="row in table_data"
+        v-for="row in paginationTableRecords"
         :key="row.id"
         :row_data="row"
       />
@@ -18,6 +18,7 @@
         class="table-page"
         v-for="page in pages"
         :key="page"
+        @click="pageClick(page)"
       >
         {{page}}
       </div>
@@ -39,12 +40,23 @@ export default {
   },
   data() {
     return {
+      pageNumber: 1,
       numberOfTableEntries: 5
     }
   },
   computed: {
     pages() {
       return Math.ceil(this.table_data.length / 5)
+    },
+    paginationTableRecords() {
+      let from = (this.pageNumber - 1) * this.numberOfTableEntries;
+      let to = from + this.numberOfTableEntries;
+      return this.table_data.slice(from, to)
+    }
+  },
+  methods: {
+    pageClick(page) {
+      this.pageNumber = page
     }
   }
 }
@@ -69,6 +81,7 @@ export default {
     justify-content: center;
   }
   .table-page {
+    cursor: pointer;
     margin-right: 10px;
     margin-top: 50px;
   }
