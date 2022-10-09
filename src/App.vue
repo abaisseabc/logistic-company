@@ -17,8 +17,16 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'TABLE'
-    ])
+      'TABLE',
+      'FILTEREDTABLE'
+    ]),
+    // followTable() {
+    //   if (this.FILTEREDTABLE > 0) {
+    //     return this.FILTEREDTABLE
+    //   } else {
+    //     return this.TABLE
+    //   }
+    // }
   },
   methods: {
     ...mapActions([
