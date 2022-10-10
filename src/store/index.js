@@ -18,7 +18,7 @@ export default createStore({
       state.table.filter( el  => {
 
         if (filterObj.condition == '=') {
-          if (el.name == filterObj.input) {
+          if (el['name_company'] == filterObj.input) {
             movingElements(el);
           }
           if (el.distance == filterObj.input) {
@@ -28,7 +28,7 @@ export default createStore({
             movingElements(el);
           }
         } else if (filterObj.condition == '>') {
-          if (el.name > filterObj.input && filterObj.column == 'name') {
+          if (el['name_company'] > filterObj.input && filterObj.column == 'name') {
             movingElements(el);
           }
           if (Number(el.distance) > Number(filterObj.input) && filterObj.column == 'distance') {
@@ -38,7 +38,7 @@ export default createStore({
             movingElements(el);
           }
         } else if (filterObj.condition == '<') {
-          if (el.name < filterObj.input && filterObj.column == 'name') {
+          if (el['name_company'] < filterObj.input && filterObj.column == 'name') {
             movingElements(el);
           }
           if (Number(el.distance) < Number(filterObj.input) && filterObj.column == 'distance') {
@@ -48,7 +48,7 @@ export default createStore({
             movingElements(el);
           }
         } else if (filterObj.condition == 'contains') {
-          if(el.name.includes(filterObj.input) && filterObj.column == 'name') {
+          if(el['name_company'].includes(filterObj.input) && filterObj.column == 'name') {
             movingElements(el);
           }
           if(el.distance.includes(filterObj.input) && filterObj.column == 'distance') {

@@ -1,0 +1,124 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+}
+  
+.container {
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.table {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+.table p {
+    flex-basis: 15%;
+    text-align: left;
+}
+.table__header {
+    display: flex;
+    justify-content: space-around;
+}
+.table__pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.table-page {
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 50px;
+}
+.table-row {
+    display: flex;
+    justify-content: space-around;
+}
+.row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-basis: 15%;
+    text-align: left;
+}
+.filter__header {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.filter__body {
+    width: 230px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #2c3e50;
+}
+.filter__body div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.filter__body select {
+    width: 230px;
+    height: 30px;
+    color: #2c3e50;
+}
+.filter__body input {
+    margin-top: 10px;
+    border: 1px solid #2c3e50;
+    width: 230px;
+    height: 30px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+.filter__btn {
+    cursor: pointer;
+    width: 230px;
+    height: 30px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+.filter__btn button {
+    color: #2c3e50;
+}

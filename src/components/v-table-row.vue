@@ -1,10 +1,10 @@
 <template>
   <div class="table-row">
     <div class="row table-row-date">
-        {{row_data.date}}
+        {{row_data['date_info']}}
     </div>
     <div class="row table-row-name">
-        {{row_data.name}}
+        {{row_data['name_company']}}
     </div>
     <div class="row table-row-amount">
         {{row_data.amount}}
@@ -26,14 +26,4 @@ export default {
 </script>
 
 <style>
-    .table-row {
-        display: flex;
-        justify-content: space-around;
-    }
-    .row {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        flex-basis: 15%;
-        text-align: left;
-    }
 </style>

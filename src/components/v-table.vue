@@ -67,55 +67,5 @@ export default {
 </script>
 
 <style>
-  .table {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  .table p {
-    flex-basis: 15%;
-    text-align: left;
-  }
-  .table__header {
-    display: flex;
-    justify-content: space-around;
-  }
-  .table__pagination {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .table-page {
-    cursor: pointer;
-    margin-right: 10px;
-    margin-top: 50px;
-  }
-  .filter__header {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .filter__body {
-    width: 230px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .filter__body div {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .filter__body select {
-    width: 230px;
-    height: 30px;
-  }
-  .filter__body input {
-    width: 230px;
-    height: 30px;
-  }
-  .filter__btn {
-    cursor: pointer;
-    margin-top: 10px;
-    width: 230px;
-    height: 30px;
-  }
+
 </style>
