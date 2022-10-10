@@ -1,25 +1,6 @@
 <template>
 
-  <div class="filter">
-    <div class="filter__header">
-        Фильтрация:
-    </div>
-    <select name="" id="" v-model="column">
-        <option value="name">Название</option>
-        <option value="amount">Количество</option>
-        <option value="distance">Расстояние</option>
-    </select>
-    <select name="" id="" v-model="condition">
-        <option value="=">Равно</option>
-        <option value="contains">Содержит</option>
-        <option value=">">Больше</option>
-        <option value="<">Меньше</option>
-    </select>
-    <input type="text" v-model="input">
-    <button @click="formOut(column, condition, input)">
-        Отфильтровать
-    </button>
-  </div>
+  <vFilter />
 
   <div class="table">
     <div class="table__header">
@@ -50,11 +31,11 @@
 
 <script>
 import vTableRow from '@/components/v-table-row.vue'
-import { mapActions } from 'vuex'
+import vFilter from '@/components/v-filter.vue'
 
 export default {
   components: {
-    vTableRow
+    vTableRow, vFilter
   },
   props: {
     table_data: {
@@ -65,9 +46,6 @@ export default {
     return {
       pageNumber: 1,
       numberOfTableEntries: 5,
-      column: '',
-      condition: '',
-      input: ''
     }
   },
   computed: {
@@ -81,21 +59,9 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      'GET_FILTER_CONDITIONS'
-    ]),
     pageClick(page) {
-      this.pageNumber = page
+      this.pageNumber = page;
     },
-    formOut(column, condition, input) {
-      let filterObj = 
-      {
-        column: column,
-        condition: condition,
-        input: input
-      }
-      this.GET_FILTER_CONDITIONS(filterObj)
-    }
   }
 }
 </script>
@@ -122,5 +88,34 @@ export default {
     cursor: pointer;
     margin-right: 10px;
     margin-top: 50px;
+  }
+  .filter__header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .filter__body {
+    width: 230px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .filter__body div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .filter__body select {
+    width: 230px;
+    height: 30px;
+  }
+  .filter__body input {
+    width: 230px;
+    height: 30px;
+  }
+  .filter__btn {
+    cursor: pointer;
+    margin-top: 10px;
+    width: 230px;
+    height: 30px;
   }
 </style>

@@ -18,15 +18,7 @@ export default {
   computed: {
     ...mapGetters([
       'TABLE',
-      'FILTEREDTABLE'
     ]),
-    // followTable() {
-    //   if (this.FILTEREDTABLE > 0) {
-    //     return this.FILTEREDTABLE
-    //   } else {
-    //     return this.TABLE
-    //   }
-    // }
   },
   methods: {
     ...mapActions([
@@ -34,7 +26,7 @@ export default {
     ])
   },
   mounted() {
-    this.GET_TABLE_FROM_DB()
+    this.GET_TABLE_FROM_DB();
   }
 }
 </script>

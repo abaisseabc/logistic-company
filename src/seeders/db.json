@@ -15,28 +15,28 @@
     },
     {
         "id": 3,
-        "date": "20.09.2022",
+        "date": "10.09.2022",
         "name": "DB Schenker Logistics",
         "amount": "18.987",
         "distance": "473764"
     },
     {
         "id": 4,
-        "date": "20.09.2022",
+        "date": "25.09.2022",
         "name": "C.H. Robinson Worldwide",
         "amount": "11.922",
         "distance": "435859"
     },
     {
         "id": 5,
-        "date": "20.09.2022",
+        "date": "24.09.2022",
         "name": "DSV",
         "amount": "8.651",
         "distance": "445735"
     },
     {
         "id": 6,
-        "date": "20.09.2022",
+        "date": "01.04.2022",
         "name": "CEVA Logistics",
         "amount": "7.864",
         "distance": "13242"
@@ -50,7 +50,7 @@
     },
     {
         "id": 8,
-        "date": "20.09.2022",
+        "date": "12.01.2022",
         "name": "Dachser & Co.",
         "amount": "7.134",
         "distance": "58468"
