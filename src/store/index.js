@@ -69,10 +69,10 @@ export default createStore({
   },
   actions: {
     GET_TABLE_FROM_DB({commit}) {
-      commit('SET_TABLE_TO_STATE', db.content)
+      commit('SET_TABLE_TO_STATE', db.content);
     },
     GET_FILTER_CONDITIONS({commit}, filterObj) {
-      commit('SET_TABLE_WITH_FILTER', filterObj)
+      commit('SET_TABLE_WITH_FILTER', filterObj);
     }
   },
 })

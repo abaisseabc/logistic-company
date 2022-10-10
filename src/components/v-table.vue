@@ -22,6 +22,7 @@
         v-for="page in pages"
         :key="page"
         @click="pageClick(page)"
+        :class="{'page__selected' : page === pageNumber}"
       >
         {{page}}
       </div>

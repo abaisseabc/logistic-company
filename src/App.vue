@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     ...mapActions([
-      'GET_TABLE_FROM_DB'
+      'GET_TABLE_FROM_DB',
     ])
   },
   mounted() {

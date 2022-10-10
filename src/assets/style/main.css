@@ -72,6 +72,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     margin-right: 10px;
     margin-top: 50px;
 }
+.table-page:hover {
+    font-weight: bold;
+}
+.page__selected {
+    font-weight: bold;
+}
+.table__body {
+    height: 170px;
+}
 .table-row {
     display: flex;
     justify-content: space-around;
