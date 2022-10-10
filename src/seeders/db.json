@@ -7,4 +7,11 @@
  {"id":7, "date_info":"2022-02-06", "name_company":"Panalpina", "amount":"7.333", "distance":"48732"},
  {"id":8, "date_info":"2022-08-01", "name_company":"Dachser & Co.", "amount":"7.134", "distance":"58468"},
  {"id":9, "date_info":"2022-01-27", "name_company":"Expeditors International", "amount":"6.565", "distance":"532134"},
- {"id":10, "date_info":"2021-01-27", "name_company":"SNCF Geodis", "amount":"5.847", "distance":"48345"}]
+ {"id":10, "date_info":"2021-01-27", "name_company":"SNCF Geodis", "amount":"5.847", "distance":"48345"},
+ {"id":11, "date_info":"2020-02-23", "name_company":"J.B Hunt", "amount":"5.799", "distance":"474733"},
+ {"id":12, "date_info":"2020-10-22", "name_company":"UPS Supply Chain Solutions", "amount":"5.758", "distance":"132424"},
+ {"id":13, "date_info":"2019-02-19", "name_company":"Sinotrans", "amount":"5.728", "distance":"8475357"},
+ {"id":14, "date_info":"2022-08-17", "name_company":"Gefco", "amount":"5.528", "distance":"2454"},
+ {"id":15, "date_info":"2022-08-17", "name_company":"Toll Holdings", "amount":"4.603", "distance":"898443"},
+ {"id":16, "date_info":"2022-04-01", "name_company":"Bollor", "amount":"4.259", "distance":"249743"},
+ {"id":17, "date_info":"2022-04-08", "name_company":"Agility Logistics", "amount":"4.220", "distance":"132423"}]
