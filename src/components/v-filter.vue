@@ -19,7 +19,7 @@
       </select>
       <div>Введите значене для фильтрации:</div>
       <input type="text" v-model="input">
-      <button @click="sendingFilterObject(column, condition, input)" class="filter__btn">
+      <button @click="sendFilterObject(column, condition, input)" class="filter__btn">
           Отфильтровать
       </button>
     </div>
@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
 export default {
     data() {
         return {
@@ -37,17 +36,15 @@ export default {
         }
     },
     methods: {
-        ...mapActions([
-            'GET_FILTER_CONDITIONS'
-        ]),
-        sendingFilterObject(column, condition, input) {
+        sendFilterObject(column, condition, input) {
             let filterObj = {
+                id: input,
                 column: column,
                 condition: condition,
                 input: input
             };
-            this.GET_FILTER_CONDITIONS(filterObj);
-        }
+            this.$emit('sendObj', filterObj)
+        },
     }
 }
 </script>

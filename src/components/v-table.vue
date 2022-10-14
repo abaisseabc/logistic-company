@@ -1,7 +1,5 @@
 <template>
 
-  <vFilter />
-
   <div class="table">
     <div class="table__header">
       <p>Дата</p>
@@ -32,11 +30,10 @@
 
 <script>
 import vTableRow from '@/components/v-table-row.vue'
-import vFilter from '@/components/v-filter.vue'
 
 export default {
   components: {
-    vTableRow, vFilter
+    vTableRow
   },
   props: {
     table_data: {
