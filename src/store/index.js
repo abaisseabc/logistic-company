@@ -19,6 +19,7 @@ export default createStore({
       state.table = db
     },
     SET_TABLE_WITH_FILTER: (state, filterObj) => {
+      state.filter_table = []
       state.table.filter( el  => {
 
         switch (filterObj.condition) {
@@ -69,26 +70,12 @@ export default createStore({
           default: 
             return state.table
         }
+      });
 
-        function checkElemInArray(el) {
-          if (state.filter_table.length === 0) {
-            state.filter_table.push(el);
-          } else {
-            state.filter_table.forEach(item => {
-
-              if (item.id !== el.id) {
-                state.filter_table = [];
-                if (item.id !== el.id) 
-                {
-                  state.filter_table.push(el);
-                }
-              }
-            })
-          }
-        }
-
-      })
-    },
+      function checkElemInArray(el) {
+        state.filter_table.push(el)
+      }
+    }
   },
   actions: {
     GET_TABLE_FROM_DB({commit}) {

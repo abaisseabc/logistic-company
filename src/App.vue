@@ -2,7 +2,6 @@
   <div class="container">
     <vFilter 
       @sendObj="filterObj"
-      @setSomething="setSomething"
     />
     <vTable 
       :table_data="filteredTable"
@@ -32,9 +31,6 @@ export default {
         return this.FILTER_TABLE
       }
     },
-    setSomething(input) {
-      return input
-    }
   },
   methods: {
     ...mapActions([
