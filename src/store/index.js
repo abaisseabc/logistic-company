@@ -75,6 +75,9 @@ export default createStore({
       function checkElemInArray(el) {
         state.filter_table.push(el)
       }
+    },
+    RETURN_TABLE_IN_INITIAL_STATE: (state) => {
+      state.filter_table = []
     }
   },
   actions: {
@@ -83,6 +86,9 @@ export default createStore({
     },
     GET_FILTER_CONDITIONS({commit}, filterObj) {
       commit('SET_TABLE_WITH_FILTER', filterObj);
+    },
+    DELETE_FROM_INPUT({commit}) {
+      commit('RETURN_TABLE_IN_INITIAL_STATE')
     }
   },
 })

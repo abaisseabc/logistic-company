@@ -18,7 +18,7 @@
         <option value="<">Меньше</option>
       </select>
       <div>Введите значене для фильтрации:</div>
-      <input type="text" v-model="input">
+      <input type="text" v-model="input" @keyup.delete="erasingFromInput">
       <button @click="sendFilterObject(column, condition, input)" class="filter__btn">
           Отфильтровать
       </button>
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 export default {
     data() {
         return {
@@ -36,6 +37,9 @@ export default {
         }
     },
     methods: {
+      ...mapActions([
+        'DELETE_FROM_INPUT'
+      ]),
         sendFilterObject(column, condition, input) {
             let filterObj = {
                 id: input,
@@ -45,6 +49,9 @@ export default {
             };
             this.$emit('sendObj', filterObj)
         },
+        erasingFromInput() {
+          this.DELETE_FROM_INPUT();
+        }
     }
 }
 </script>
