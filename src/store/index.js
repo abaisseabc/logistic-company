@@ -24,46 +24,46 @@ export default createStore({
 
         switch (filterObj.condition) {
           case '=':
-            if (el['name_company'] == filterObj.input) {
+            if (String(el['name_company']) === String(filterObj.input)) {
               checkElemInArray(el);
             }
-            if (el.distance == filterObj.input) {
+            if (Number(el.distance) === Number(filterObj.input)) {
               checkElemInArray(el);
             }
-            if (el.amount == filterObj.input) {
+            if (Number(el.amount) === Number((filterObj.input))) {
               checkElemInArray(el);
             }
             break;
           case '>':
-            if (el['name_company'] > filterObj.input && filterObj.column == 'name') {
+            if (String(el['name_company']) > String(filterObj.input) && String(filterObj.column) === 'name') {
               checkElemInArray(el);
             }
-            if (Number(el.distance) > Number(filterObj.input) && filterObj.column == 'distance') {
+            if (Number(el.distance) > Number(filterObj.input) && String(filterObj.column) === 'distance') {
               checkElemInArray(el);
             }
-            if (Number(el.amount) > Number(filterObj.input) && filterObj.column == 'amount') {
+            if (Number(el.amount) > Number(filterObj.input) && String(filterObj.column) === 'amount') {
               checkElemInArray(el);
             }
             break;
           case '<':
-            if (el['name_company'] < filterObj.input && filterObj.column == 'name') {
+            if (String(el['name_company']) < String(filterObj.input) && String(filterObj.column) === 'name') {
               checkElemInArray(el);
             }
-            if (Number(el.distance) < Number(filterObj.input) && filterObj.column == 'distance') {
+            if (Number(el.distance) < Number(filterObj.input) && String(filterObj.column) === 'distance') {
               checkElemInArray(el);
             }
-            if (Number(el.amount) < Number(filterObj.input) && filterObj.column == 'amount') {
+            if (Number(el.amount) < Number(filterObj.input) && String(filterObj.column) === 'amount') {
               checkElemInArray(el);
             }
             break;
           case 'contains':
-            if(el['name_company'].includes(filterObj.input) && filterObj.column == 'name') {
+            if(el['name_company'].includes(filterObj.input) && String(filterObj.column) === 'name') {
               checkElemInArray(el);
             }
-            if(el.distance.includes(filterObj.input) && filterObj.column == 'distance') {
+            if(el.distance.includes(filterObj.input) && String(filterObj.column) === 'distance') {
               checkElemInArray(el);
             }
-            if (el.amount.includes(filterObj.input) && filterObj.column == 'amount') {
+            if (el.amount.includes(filterObj.input) && String(filterObj.column) === 'amount') {
               checkElemInArray(el);
             }
             break;
