@@ -18,7 +18,7 @@
         <option value="<">Меньше</option>
       </select>
       <div>Введите значене для фильтрации:</div>
-      <input type="text" v-model="input" @keyup.delete="erasingFromInput">
+      <input type="text" v-model="input" @keyup.delete="erasingFromInput" @keydown.enter="sendFilterObject(column, condition, input)">
       <button @click="sendFilterObject(column, condition, input)" class="filter__btn">
           Отфильтровать
       </button>
@@ -40,18 +40,18 @@ export default {
       ...mapActions([
         'DELETE_FROM_INPUT'
       ]),
-        sendFilterObject(column, condition, input) {
-            let filterObj = {
-                id: input,
-                column: column,
-                condition: condition,
-                input: input
-            };
-            this.$emit('sendObj', filterObj)
-        },
-        erasingFromInput() {
-          this.DELETE_FROM_INPUT();
-        }
+      sendFilterObject(column, condition, input) {
+          let filterObj = {
+              id: input,
+              column: column,
+              condition: condition,
+              input: input
+          };
+          this.$emit('sendObj', filterObj)
+      },
+      erasingFromInput() {
+        this.DELETE_FROM_INPUT();
+      }
     }
 }
 </script>
